@@ -1,0 +1,63 @@
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Text:regular,500,700&display=swap');
+
+html,
+body{
+    height: 100%;
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 16px;
+    color: black;
+    line-height: 21px;
+    font-style: normal;
+}
+.wrapper{
+    background-image: url("https://raw.githubusercontent.com/Aphness007/stage1-tasks/assets/images/afternoon/08.jpg");
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    min-height: 100%;
+    overflow: hidden;
+}
+img {
+    max-width: 100%;
+}
+.image{
+    width: 18rem;
+    height: 22rem;
+}
+.main-section{
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        flex-direction:row;
+    }
+    &__card{
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        max-width: 38rem;
+    }
+    &__game-level{
+        justify-content: center;
+        align-self: center;
+        &__easy,
+        &__average,
+        &__hard{
+            font-family: inherit;
+            font-size: 20px;
+            font-weight: 700;
+            border: 1px solid transparent;
+            border-radius: 20px;
+            box-shadow: rgb(0 0 0 / 50%) 10px 19px 30px, rgb(0 0 0 / 50%) 10px 10px 15px 12px;
+            padding: 20px;
+            min-width: 10rem;
+            text-align: center;
+            margin-bottom: 20px;
+
+        }
+    }
+    &__logic{
+        // color: red;
+    }
+}
