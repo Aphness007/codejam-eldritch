@@ -75,17 +75,18 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 html,
 body {
+  background: url('https://raw.githubusercontent.com/Aphness007/stage1-tasks/assets/images/afternoon/08.jpg') no-repeat top;
   height: 100%;
+  background-size: cover;
   font-family: 'Red Hat Text', sans-serif;
   font-size: 16px;
-  color:black;
+  color: rgb(88, 11, 188);
   line-height: 21px;
   font-style: normal;
 }
 
 .wrapper {
-  background: url('https://raw.githubusercontent.com/Aphness007/stage1-tasks/assets/images/afternoon/08.jpg') no-repeat top;
-  background-size: cover;
+
   max-width: 1440px;
   margin: 0 auto;
   padding: 10px 20px;
@@ -187,4 +188,54 @@ img {
   padding: 20px;
   min-width: 10rem;
   text-align: center;
+  min-width: 20rem;
+}
+
+.deck__stage{
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+}
+.deck__count{
+  display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+.deck__stage{
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+.deck__green,
+.deck__red,
+.deck__blue{
+  border: 1px solid transparent;
+  border-radius: 50%;
+  min-width: 40px;
+  min-height: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 6px;
+  color: white;
+}
+.deck__green{
+  background: green;
+}
+.deck__red{
+  background: red;
+}
+.deck__blue{
+  background: blue;
+}
+.card-back{
+  width: 8rem;
+  height: 12rem;
+  margin-right: 10px;
+}
+.logic__card-deck{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
 }
