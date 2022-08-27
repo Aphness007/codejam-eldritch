@@ -129,7 +129,8 @@ img {
   gap: 1rem;
   max-width: 38rem;
 }
-.main-section__game-level .game-level__easy {
+.game-level__very-easy,
+.game-level__easy {
   font-family: inherit;
   font-size: inherit;
   font-weight: 700;
@@ -139,6 +140,7 @@ img {
   box-shadow: rgb(0 0 0 / 50%) 10px 19px 30px, rgb(0 0 0 / 50%) 10px 10px 15px 12px;
   padding: 20px;
   min-width: 10rem;
+  min-height: 3rem;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -146,7 +148,7 @@ img {
   justify-content: center;
   align-self: center;
 }
-.main-section__game-level .game-level__average {
+.game-level__average{
   font-family: inherit;
   font-size: inherit;
   font-weight: 700;
@@ -156,10 +158,12 @@ img {
   box-shadow: rgb(0 0 0 / 50%) 10px 19px 30px, rgb(0 0 0 / 50%) 10px 10px 15px 12px;
   padding: 20px;
   min-width: 10rem;
+  min-height: 3rem;
   text-align: center;
   margin-bottom: 20px;
 }
-.main-section__game-level .game-level__hard{
+.game-level__very-hard,
+.game-level__hard{
   font-family: inherit;
   font-size: inherit;
   font-weight: 700;
@@ -169,7 +173,9 @@ img {
   box-shadow: rgb(0 0 0 / 50%) 10px 19px 30px, rgb(0 0 0 / 50%) 10px 10px 15px 12px;
   padding: 20px;
   min-width: 10rem;
+  min-height: 3rem;
   text-align: center;
+  margin-bottom: 20px;
 }
 .main-section__logic{
   display: flex;
@@ -177,7 +183,7 @@ img {
   justify-content: space-around;
   /* align-self: center; */
 }
-.main-section__logic .logic__shuffle{
+.logic__shuffle{
   font-family: inherit;
   font-size: inherit;
   font-weight: 700;
@@ -189,6 +195,7 @@ img {
   min-width: 10rem;
   text-align: center;
   min-width: 20rem;
+  margin-bottom: 30px;
 }
 
 .deck__stage{
@@ -223,14 +230,15 @@ img {
   background: green;
 }
 .deck__red{
-  background: red;
+  background: brown;
 }
 .deck__blue{
   background: blue;
 }
-.card-back{
-  width: 8rem;
-  height: 12rem;
+.card-back,
+.card-deck__click{
+  width: 10rem;
+  height: 14rem;
   margin-right: 10px;
 }
 .logic__card-deck{
@@ -238,4 +246,15 @@ img {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
+}
+.active{
+  border: 5px solid rgb(198, 138, 198);
+  align-self: center;
+
+}
+.finish{
+  display: none;
+}
+.active_level{
+  background: rgb(198, 138, 198);
 }
