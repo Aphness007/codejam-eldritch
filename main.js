@@ -145,7 +145,7 @@ function checkLevel(e) {
         else return azathothPattern;
     }
 
-    // =====        CALCULATE CARDS IN ARRAYS, ADD ADDITIONAL IF NEEDED
+    // =====        CALCULATE CARDS IN ARRAYS AND ADD ADDITIONAL IF NEEDED
     let green;
     let blue;
     let brown;
@@ -178,8 +178,8 @@ function checkLevel(e) {
             }
          }
       }
-    // ===============    SHUFFLE SMALL STAGE ARRAYS
 
+    // ===============    SHUFFLE SMALL STAGE ARRAYS
     function shuffleArray (array) {
         for (let i = array.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
@@ -188,8 +188,8 @@ function checkLevel(e) {
           array[j] = temp;
         }
       }
-    // =====        FILL SMALL STAGE ARRAYS DEPENDING ON ANCIENT CHOSEN
 
+    // =====        FILL SMALL STAGE ARRAYS DEPENDING ON ANCIENT CHOSEN
     let stage1DeckBlue = [];
     let stage1DeckGreen = [];
     let stage1DeckBrown = [];
