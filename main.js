@@ -28,6 +28,7 @@ const shuffle = document.querySelector('.logic__shuffle');
 const card_back = document.querySelector('.card-back'); 
 const card_click = document.querySelector('.card-deck__click'); 
 
+const newGame = document.querySelector('.logic__finish');
 let ancientSelected;
 let levelSelected;
 
@@ -280,11 +281,7 @@ function checkLevel(e) {
         shuffleArray(stage1);
         shuffleArray(stage2);
         shuffleArray(stage3);
-        console.log(stage1)
-        console.log(stage2)
-        console.log(stage3)
         combine();
-        console.log(game)
 
     }
     let game = [];
@@ -295,15 +292,16 @@ function checkLevel(e) {
 // ===============    SHOW CARD
 
     function showCard(){
-
       display (game);
       remove (game);
       if(game.length == 0){
         card_back.classList.toggle('finish');
         card_click.classList.toggle('finish');
-      }
 
+        newGame.classList.toggle('new_game');
+        newGame.textContent = 'START NEW GAME';
       }
+   }
 
     function display (array){
       card_click.src = `./assets/MythicCards/${array[0].color}/${array[0].id}.png`;
