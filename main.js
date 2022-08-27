@@ -1,3 +1,9 @@
+console.log('1. предоставляется минимум одна карта древнего (максимум 4) +5-20 баллов(по 5 за каждого древнего');
+console.log('2. предоставляется несколько уровней сложности (максимум 5) +5-25 баллов(по 5 за каждый уровень сложности');
+console.log('3. Карты замешиваются согласно правилам игры +40 баллов');
+console.log('4. Есть трекер текущего состояния колоды +20 баллов');
+console.log('self assessment: 100')
+
 const card = document.querySelector('.card');
 const cthulthu = document.querySelector('.Cthulthu');
 const shubNiggurath = document.querySelector('.ShubNiggurath');
@@ -43,13 +49,13 @@ const level = [very_easy, easy, normal, hard, very_hard];
 let arr;
 
 function hide (className){
-    if(className ===  cthulthu) arr = ancients.filter(el => el !== className).forEach(e => e.style.display = 'none');
-    if(className ===  shubNiggurath) arr = ancients.filter(el => el !== className).forEach(e => e.style.display = 'none');
-    if(className ===  iogSothoth) arr = ancients.filter(el => el !== className).forEach(e => e.style.display = 'none');
-    if(className ===  azathoth) arr = ancients.filter(el => el !== className).forEach(e => e.style.display = 'none');
-    if(className ===  very_easy) arr = level.filter(el => el !== className).forEach(e => e.style.display = 'none');
-    if(className ===  easy) arr = level.filter(el => el !== className).forEach(e => e.style.display = 'none');
-    if(className ===  normal) arr = level.filter(el => el !== className).forEach(e => e.style.display = 'none');
+    if(className === cthulthu) arr = ancients.filter(el => el !== className).forEach(e => e.style.display = 'none');
+    if(className === shubNiggurath) arr = ancients.filter(el => el !== className).forEach(e => e.style.display = 'none');
+    if(className === iogSothoth) arr = ancients.filter(el => el !== className).forEach(e => e.style.display = 'none');
+    if(className === azathoth) arr = ancients.filter(el => el !== className).forEach(e => e.style.display = 'none');
+    if(className === very_easy) arr = level.filter(el => el !== className).forEach(e => e.style.display = 'none');
+    if(className === easy) arr = level.filter(el => el !== className).forEach(e => e.style.display = 'none');
+    if(className === normal) arr = level.filter(el => el !== className).forEach(e => e.style.display = 'none');
     if(className === hard ) arr = level.filter(el => el !== className).forEach(e => e.style.display = 'none');
     if(className === very_hard ) arr = level.filter(el => el !== className).forEach(e => e.style.display = 'none');
 }
@@ -132,7 +138,6 @@ function checkLevel(e) {
     }
 
     // =====        DETERMINE ANCIENT
-
     function selectPattern (whatAncient){
         if(whatAncient ===  cthulthu) return cthulthuPattern;
         if(whatAncient ===  shubNiggurath) return shubNiggurathPattern;
@@ -141,7 +146,6 @@ function checkLevel(e) {
     }
 
     // =====        CALCULATE CARDS IN ARRAYS, ADD ADDITIONAL IF NEEDED
-
     let green;
     let blue;
     let brown;
@@ -269,8 +273,6 @@ function checkLevel(e) {
 
         }
 
-
-
     function check (){
         shuffle.classList.toggle('active_level');
         decksBuilding(levelSelected);
@@ -282,9 +284,10 @@ function checkLevel(e) {
         shuffleArray(stage2);
         shuffleArray(stage3);
         combine();
-
     }
+
     let game = [];
+
     function combine (){
       game = [...stage1, ...stage2, ...stage3];
     }
@@ -297,7 +300,6 @@ function checkLevel(e) {
       if(game.length == 0){
         card_back.classList.toggle('finish');
         card_click.classList.toggle('finish');
-
         newGame.classList.toggle('new_game');
         newGame.textContent = 'START NEW GAME';
       }
@@ -320,7 +322,6 @@ function checkLevel(e) {
           populateCountDown();
       }
     }
-  
     if(stage1.length === 0 && stage2.length > 0){
       if(stage2[0].id === array.id) {
       stage2.shift();
@@ -332,8 +333,8 @@ function checkLevel(e) {
         stage3.shift();
         populateCountDown();
     }
-    }
   }
+}
 
 // ================  MAIN
 
